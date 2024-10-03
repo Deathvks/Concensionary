@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Dylan's Concensionary
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="primary">
+    <h1 class="title">Concentrator number 1 in canaries islands</h1>
+    <p>Nuestras mejores Marcas y modelos:</p>
+  </div>
+  
+  <div id="examples">
+    <div id="ex">
+      <div class="item">
+        <p>Model: {{model}}</p>
+        <h1 class="brand">Brand: {{brand}}</h1>
+      </div>
+      <div class="item">
+        <p>Model: {{model2}}</p>
+        <h1 class="brand">Brand: {{brand2}}</h1>
+      </div>
+      <div class="item">
+        <p>Model {{model3}}</p>
+        <h1 class="brand">Brand: {{brand3}}</h1>
+      </div>
+      <div class="item">
+        <p>Model {{model4}}</p>
+        <h1 class="brand">Brand: {{brand4}}</h1>
+      </div>
+    </div>
+  </div>
+
+  <ion-button expand="block" (click)="goToEjemCars()">Show Cars in stock</ion-button>
+
+</ion-content>

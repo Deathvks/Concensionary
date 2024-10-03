@@ -1,0 +1,38 @@
+.car-list {
+    flex-direction: column;
+    background-color: white; 
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 15vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.car-item {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.car-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.4rem;
+    color: rgb(0, 132, 255);
+    margin: 0;
+}
+
+.model {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0;
+}

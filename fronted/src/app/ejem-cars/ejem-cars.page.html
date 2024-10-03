@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CARS IN STOCK</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list *ngFor="let c of cars" class="car-list">
+    <ion-label class="car-item">
+      <h1 class="brand">{{c.brand}}</h1>
+      <p class="model">{{c.model}}</p>
+    </ion-label>
+  </ion-list>
+  
+</ion-content>
