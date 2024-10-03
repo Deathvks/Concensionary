@@ -27,5 +27,10 @@ exports.update = (req, res) => {
 }
 
 exports.delete = (req, res) => {
+    const id = req.params.id;
 
+  Concensionary.destroy({ where: { id: id } }).then(() => {
+    console.log("all its delete");
+    res.send({ message: "deleted" });
+  });
 }
