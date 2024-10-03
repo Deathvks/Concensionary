@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CarService } from '../services/car.service';
 
 @Component({
   selector: 'app-ejem-cars',
@@ -7,32 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjemCarsPage implements OnInit {
 
-  cars: any = [
-    {
-      id: 1,
-      brand: "Audi",
-      model: "A3 Sportback"
-    },
-    {
-      id: 2,
-      brand: "Toyota",
-      model: "G6"
-    },
-    {
-      id: 3,
-      brand: "Hyundai",
-      model: "i20N"
-    },
-    {
-      id: 4,
-      brand: "Hyundai",
-      model: "i30N"
-    }
-  ]
+  concensionary: any = [];
 
-  constructor() { }
+  constructor(private carService: CarService) { }
 
-  ngOnInit() {
+  ngOnInit(){
+    this.getAllCars();
+  }
+
+  getAllCars(){
+    this.carService.getAll().subscribe(data => {
+      console.log("Data has arrived");
+      console.log(data);
+      this.concensionary = data;
+    });
+  }
+
+  deteleCar(id: any){
+    this.carService.delete(id).subscribe(response => {
+      this.getAllCars();
+    });
   }
 
 }

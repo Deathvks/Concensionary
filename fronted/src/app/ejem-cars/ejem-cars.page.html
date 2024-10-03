@@ -5,12 +5,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <div class="car-list">
+    <div class="car-header">
+      <div class="car-column">Brand</div>
+      <div class="car-column">Model</div>
+      <div class="car-column">Actions</div> <!-- Nueva columna para el botón -->
+    </div>
+    <div *ngFor="let c of concensionary" class="car-row">
+      <div class="car-column">{{c.brand}}</div>
+      <div class="car-column">{{c.model}}</div>
+      <div class="car-column">
+        <ion-button (click)="deteleCar(c.id)" color="danger">Delete</ion-button> <!-- Botón Delete -->
+      </div>
+    </div>
+  </div>
   
-  <ion-list *ngFor="let c of cars" class="car-list">
-    <ion-label class="car-item">
-      <h1 class="brand">{{c.brand}}</h1>
-      <p class="model">{{c.model}}</p>
-    </ion-label>
-  </ion-list>
-  
+
+
 </ion-content>

@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path: 'ejem-cars',
     loadChildren: () => import('./ejem-cars/ejem-cars.module').then( m => m.EjemCarsPageModule)
-  },
+  }
+
 ];
 
 @NgModule({
