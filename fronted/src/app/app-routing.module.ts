@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'ejem-cars',
     loadChildren: () => import('./ejem-cars/ejem-cars.module').then( m => m.EjemCarsPageModule)
+  },  {
+    path: 'add-car',
+    loadChildren: () => import('./add-car/add-car.module').then( m => m.AddCarPageModule)
   }
+
 
 ];
 

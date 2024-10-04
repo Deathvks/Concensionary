@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../services/car.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ejem-cars',
@@ -10,7 +11,7 @@ export class EjemCarsPage implements OnInit {
 
   concensionary: any = [];
 
-  constructor(private carService: CarService) { }
+  constructor(private carService: CarService, private router: Router) { }
 
   ngOnInit(){
     this.getAllCars();
@@ -32,6 +33,10 @@ export class EjemCarsPage implements OnInit {
     this.carService.delete(id).subscribe(response => {
       this.getAllCars();
     });
+  }
+
+  goToAddCar(){
+    this.router.navigateByUrl("/add-car")
   }
 
 }
