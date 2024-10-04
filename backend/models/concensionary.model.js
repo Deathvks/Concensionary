@@ -5,6 +5,9 @@ module.exports = (sequelize, Sequelize) => {
         },
         model: {
             type: Sequelize.STRING
+        },
+        power: {
+            type: Sequelize.STRING
         }
     });
 

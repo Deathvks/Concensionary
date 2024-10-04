@@ -14,7 +14,7 @@ export class CarService {
         return this.httpClient.get(this.endPoint);
     }
 
-    create(brand: string, model: string) {
+    create(brand: string, model: string, power: string) {
         const headers = new HttpHeaders({
             'content-type': 'application/x-www-form-urlencoded'
         });
@@ -22,6 +22,7 @@ export class CarService {
         const body = new URLSearchParams();
         body.append("brand", brand)
         body.append("model", model)
+        body.append("power", power)
 
         return this.httpClient.post(this.endPoint, body, { headers })
     }

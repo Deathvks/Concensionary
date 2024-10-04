@@ -22,6 +22,14 @@
       The model is obligatory
     </ion-note>
 
+    <ion-item lines="full" class="input-item">
+      <ion-label position="floating">Power</ion-label>
+      <ion-input formControlName="power" type="text"></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="getFormControl('power')?.hasError('required') && getFormControl('power')?.touched">
+      The power is obligatory
+    </ion-note>
+
     <ion-button type="submit" expand="block" [disabled]="!carForm.valid" class="submit-button">
       Add a car
     </ion-button>

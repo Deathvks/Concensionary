@@ -35,6 +35,10 @@ export class EjemCarsPage implements OnInit {
     });
   }
 
+  updateCar(id: any){
+
+  }
+
   goToAddCar(){
     this.router.navigateByUrl("/add-car")
   }

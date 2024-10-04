@@ -13,12 +13,12 @@ export class AddCarPage implements OnInit {
   carForm: FormGroup;
 
   constructor(private carService: CarService,
-              public formBuider: FormBuilder,
-              private toastController: ToastController  // Inyectar ToastController
+              public formBuider: FormBuilder
   ) { 
     this.carForm = this.formBuider.group({
       brand: ['', Validators.compose([Validators.required])],
-      model: ['', Validators.compose([Validators.required])]
+      model: ['', Validators.compose([Validators.required])],
+      power: ['', Validators.compose([Validators.required])]
     });
   }
 
@@ -32,8 +32,9 @@ export class AddCarPage implements OnInit {
 
     const brand = this.carForm.value.brand;
     const model = this.carForm.value.model;
+    const power = this.carForm.value.power;
 
-    this.carService.create(brand, model).subscribe(async (response) => {
+    this.carService.create(brand, model, power).subscribe(async (response) => {
       console.log("Car created");
 
       this.carForm.reset();

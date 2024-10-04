@@ -4,7 +4,8 @@ const Concensionary = db.concensionary;
 exports.create = (req, res) => {
     const car = {
         brand: req.body.brand,
-        model: req.body.model
+        model: req.body.model,
+        power: req.body.power
     }
 
     Concensionary.create(car).then((data) => {
