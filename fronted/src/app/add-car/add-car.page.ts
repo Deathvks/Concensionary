@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CarService } from '../services/car.service';
 import { ToastController } from '@ionic/angular';  // Importar ToastController para retroalimentación visual
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-car',
@@ -13,7 +14,8 @@ export class AddCarPage implements OnInit {
   carForm: FormGroup;
 
   constructor(private carService: CarService,
-              public formBuider: FormBuilder
+              public formBuider: FormBuilder,
+              private router: Router
   ) { 
     this.carForm = this.formBuider.group({
       brand: ['', Validators.compose([Validators.required])],
@@ -44,5 +46,9 @@ export class AddCarPage implements OnInit {
 
   getFormControl(field: string) {
     return this.carForm.get(field);
+  }
+
+  goToCarList() {
+    this.router.navigateByUrl("/ejem-cars")
   }
 }

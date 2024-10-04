@@ -31,4 +31,8 @@ export class CarService {
         return this.httpClient.delete(`${this.endPoint}/${id}`);
     }
 
+    update(id: any, data: any){
+        return this.httpClient.put(`${this.endPoint}/${id}`, data);
+    }
+
 }
