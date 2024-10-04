@@ -5,8 +5,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <form [formGroup]="carForm" (ngSubmit)="createCar()">
-    <ion-item>
+  <form [formGroup]="carForm" (ngSubmit)="createCar()" class="form-container">
+    <ion-item lines="full" class="input-item">
       <ion-label position="floating">Brand</ion-label>
       <ion-input formControlName="brand" type="text"></ion-input>
     </ion-item>
@@ -14,7 +14,7 @@
       The brand is obligatory
     </ion-note>
 
-    <ion-item>
+    <ion-item lines="full" class="input-item">
       <ion-label position="floating">Model</ion-label>
       <ion-input formControlName="model" type="text"></ion-input>
     </ion-item>
@@ -22,7 +22,8 @@
       The model is obligatory
     </ion-note>
 
-    <ion-button type="submit" [disabled]="!carForm.valid">Add a car</ion-button>
-
+    <ion-button type="submit" expand="block" [disabled]="!carForm.valid" class="submit-button">
+      Add a car
+    </ion-button>
   </form>
 </ion-content>
