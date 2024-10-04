@@ -5,7 +5,7 @@ module.exports = app => {
 
     router.post("/", concensionary.create);
 
-    router.put("/", concensionary.update);
+    router.put("/:id", concensionary.update);
 
     router.get("/", concensionary.findAll);
 
