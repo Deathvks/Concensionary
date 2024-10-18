@@ -41,5 +41,4 @@ This project has been created thanks to the topics given in class and an exhaust
 
   - **Dylan Jesús Suárez Falcón** - *Provided README Template* -
     [PurpleBooth](https://github.com/PurpleBooth)
-  - **Credits:** - https://thegoodburger.com/es
   - **Componente de terceros** - https://leafletjs.com/ || https://fonts.google.com/
